@@ -1,0 +1,35 @@
+#[doc = "Register `SRCADDR4` reader"]
+pub type R = crate::R<Srcaddr4Spec>;
+#[doc = "Register `SRCADDR4` writer"]
+pub type W = crate::W<Srcaddr4Spec>;
+#[doc = "Field `SRCADDR` reader - desc SRCADDR"]
+pub type SrcaddrR = crate::FieldReader<u32>;
+#[doc = "Field `SRCADDR` writer - desc SRCADDR"]
+pub type SrcaddrW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - desc SRCADDR"]
+    #[inline(always)]
+    pub fn srcaddr(&self) -> SrcaddrR {
+        SrcaddrR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - desc SRCADDR"]
+    #[inline(always)]
+    pub fn srcaddr(&mut self) -> SrcaddrW<'_, Srcaddr4Spec> {
+        SrcaddrW::new(self, 0)
+    }
+}
+#[doc = "Channel4 source address register\n\nYou can [`read`](crate::Reg::read) this register and get [`srcaddr4::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srcaddr4::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Srcaddr4Spec;
+impl crate::RegisterSpec for Srcaddr4Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`srcaddr4::R`](R) reader structure"]
+impl crate::Readable for Srcaddr4Spec {}
+#[doc = "`write(|w| ..)` method takes [`srcaddr4::W`](W) writer structure"]
+impl crate::Writable for Srcaddr4Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SRCADDR4 to value 0"]
+impl crate::Resettable for Srcaddr4Spec {}

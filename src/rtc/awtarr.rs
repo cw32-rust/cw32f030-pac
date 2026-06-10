@@ -1,0 +1,35 @@
+#[doc = "Register `AWTARR` reader"]
+pub type R = crate::R<AwtarrSpec>;
+#[doc = "Register `AWTARR` writer"]
+pub type W = crate::W<AwtarrSpec>;
+#[doc = "Field `ARR` reader - desc ARR"]
+pub type ArrR = crate::FieldReader<u16>;
+#[doc = "Field `ARR` writer - desc ARR"]
+pub type ArrW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - desc ARR"]
+    #[inline(always)]
+    pub fn arr(&self) -> ArrR {
+        ArrR::new((self.bits & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - desc ARR"]
+    #[inline(always)]
+    pub fn arr(&mut self) -> ArrW<'_, AwtarrSpec> {
+        ArrW::new(self, 0)
+    }
+}
+#[doc = "Auto Wakeup Timer Auto Reload Register\n\nYou can [`read`](crate::Reg::read) this register and get [`awtarr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`awtarr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AwtarrSpec;
+impl crate::RegisterSpec for AwtarrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`awtarr::R`](R) reader structure"]
+impl crate::Readable for AwtarrSpec {}
+#[doc = "`write(|w| ..)` method takes [`awtarr::W`](W) writer structure"]
+impl crate::Writable for AwtarrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets AWTARR to value 0"]
+impl crate::Resettable for AwtarrSpec {}

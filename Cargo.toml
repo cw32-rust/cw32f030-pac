@@ -1,0 +1,22 @@
+[package]
+name = "cw32f030-pac"
+version = "0.1.1"
+edition = "2021"
+description = "Peripheral access crate for the Wuhan Xinyuan CW32F030 microcontroller"
+license = "GPL-3.0-only"
+
+[features]
+default = ["rt"]
+rt = ["cortex-m-rt/device"]
+
+[dependencies]
+critical-section = { version = "1.0", optional = true }
+vcell = "0.1.3"
+
+[dependencies.cortex-m]
+version = "0.7.7"
+features = ["critical-section-single-core"]
+
+[dependencies.cortex-m-rt]
+version = "0.7.3"
+optional = true
